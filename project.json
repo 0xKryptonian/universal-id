@@ -1,0 +1,25 @@
+{
+  "name": "UniversalID",
+  "tagline": "Decentralized data marketplace for secure dataset publishing, verification, and trading",
+  "description": "UniversalID is a decentralized service to create, verify, and trade synthetic datasets on Filecoin blockchain using Filecoin CDN, IPFS and Verifiable LLMs.",
+  "team": [
+    {
+      "name": "Kryptonian",
+      "email": "xerox336699@gmail.com"
+    }
+  ],
+  "demo_url": "https://universalid.vercel.app/",
+  "video_url": "",
+  "technologies": [
+    "IPFS",
+    "Filecoin",
+    "FilCDN",
+    "TailwindCSS",
+    "Shadcn UI",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Ethers.js",
+    "Wagmi"
+  ]
+}
