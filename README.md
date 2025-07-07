@@ -1,14 +1,9 @@
-# 🥳 Introduction AgenticID
+# 🥳 Introduction to Universal ID
 
-AgenticID is a decentralized identity aggregation and verification protocol built on Rootstock blockchain that empowers users with comprehensive identity verification through multiple proof vectors. By leveraging zero-knowledge proofs and tensor AI models, AgenticID creates a privacy-preserving, trustless verification identity that bridges on-chain and off-chain identity elements while keeping user data secure and sovereign.
+Universal ID is a decentralized identity aggregation and verification protocol built on Filecoin that empowers users with comprehensive identity verification through multiple proof vectors. By leveraging zero-knowledge proofs and tensor AI models, Universal ID creates a privacy-preserving, trustless verification identity that bridges on-chain and off-chain identity elements while keeping user data secure and sovereign.
 
-Our solution addresses the critical need for reliable, privacy-preserving identity in Web3 by combining multiple verification methods: ENS verification, liveness detection, humanity proof via Worldchain, social media verification through TLSNotary, nationality verification using AnonAadhaar, and reputation scoring through advanced AI models—all unified on Rootstock's secure and Bitcoin-backed infrastructure.
+Our solution addresses the critical need for reliable, privacy-preserving identity in Web3 by combining multiple verification methods: ENS verification, liveness detection, humanity proof via Worldchain, social media verification through TLSNotary, nationality verification using AnonAadhaar, and reputation scoring through advanced AI models—all unified on Filecoin's secure and decentralized storage infrastructure.
 
-## Contracts
-
-AgenticID Contract: [0x419cFe85e77a0A26B9989059057318F59764F7C5](https://explorer.testnet.rootstock.io/address/0x419cFe85e77a0A26B9989059057318F59764F7C5)
-
-Governance Contract: [0x0b3a2D73D07eA2D5D0D0FB4Db09004f74D92767a](https://explorer.testnet.rootstock.io/address/0x0b3a2D73D07eA2D5D0D0FB4Db09004f74D92767a)
 
 ## The Problem: Identity Fragmentation in Web3
 
@@ -23,7 +18,7 @@ The blockchain ecosystem suffers from severe identity fragmentation and verifica
 
 This fragmentation creates friction for users, increases costs, and prevents mainstream adoption of Web3 applications.
 
-## Technical Implementation on Rootstock
+## Technical Implementation on Filecoin
 
 ### Graph
 
@@ -43,9 +38,9 @@ graph TD
 
     subgraph "Blockchain Layer"
         Contracts[Smart Contracts]
-        RootstockBC[Rootstock Blockchain]
+        FilecoinBC[Filecoin Network]
         style Contracts fill:#D5E8D4,stroke:#333
-        style RootstockBC fill:#DAE8FC,stroke:#333
+        style FilecoinBC fill:#DAE8FC,stroke:#333
     end
 
     subgraph "External Services"
@@ -64,7 +59,7 @@ graph TD
     WebApp --> Server
     WebApp --> Contracts
     Server --> AI
-    Contracts --> RootstockBC
+    Contracts --> FilecoinBC
 
     WebApp --> WorldCoin
     WebApp --> Twitter
@@ -80,7 +75,7 @@ sequenceDiagram
     participant Server as API Server
     participant AI as AI Service
     participant ExternalServices as External Verification Services
-    participant Blockchain as Rootstock Blockchain
+    participant Blockchain as Filecoin Network
 
     User->>WebApp: Visit Agentic Identity platform
 
@@ -165,12 +160,12 @@ flowchart TD
     APIController-->|JSON Response|WebApp
 
     WebApp-->|Display Score|User((User))
-    User-->|Mint NFT with Score|Blockchain[Rootstock Blockchain]
+    User-->|Mint NFT with Score|Blockchain[Filecoin Network]
 ````
 
-## Our Solution: AgenticID Framework
+## Our Solution: Universal ID Framework
 
-AgenticID provides a unified identity verification layer on Rootstock that leverages Bitcoin's security with Ethereum's flexibility. Our solution introduces a comprehensive verification framework through six key components:
+Universal ID provides a unified identity verification layer on Filecoin that leverages decentralized storage with smart contract flexibility. Our solution introduces a comprehensive verification framework through six key components:
 
 ### 1. ENS Verification Module
 
@@ -208,16 +203,16 @@ AgenticID provides a unified identity verification layer on Rootstock that lever
 
 - Thinking to bring credit scoring from web2 platform to web3 ecosystem without storing sophisticated credit data of user.
 
-# Technical Implementation on Rootstock
+# Technical Implementation on Filecoin
 
-AgenticID leverages Rootstock's unique capabilities as a Bitcoin sidechain with Ethereum Virtual Machine compatibility:
+Universal ID leverages Filecoin's unique capabilities as a decentralized storage network with smart contract support:
 
 ### -Smart Contract Architecture
 
-- Core verification registry deployed on Rootstock
-- Mod ular verification contracts for each proof type
+- Core verification registry deployed on Filecoin
+- Modular verification contracts for each proof type
 - Upgradeable proxy pattern for future enhancements
-- Soulbound NFTs based AgenticID representing verified identity of user wallet onchain
+- Soulbound NFTs based Universal ID representing verified identity of user wallet onchain
 
 ### - Zero-Knowledge Infrastructure
 
@@ -265,7 +260,7 @@ AgenticID enables revolutionary applications across multiple sectors:
 
 ### Phase 1: Core Infrastructure (MVP Complete)
 
-- Smart contract deployment on Rootstock testnet
+- Smart contract deployment on Filecoin testnet
 - Integration of initial verification modules (ENS, Liveness)
 - Integration of Worldchain, TLSNotary, and AnonAadhaar
 - MVP development and deployment to test basic functionalities.
@@ -278,7 +273,7 @@ AgenticID enables revolutionary applications across multiple sectors:
 
 ### Phase 3: Mainnet Launch
 
-- Full deployment to Rootstock mainnet
+- Full deployment to Filecoin mainnet
 - Developer SDK and API for third-party integration
 - Cross-chain identity bridging implementations
 
@@ -290,7 +285,7 @@ AgenticID enables revolutionary applications across multiple sectors:
 
 ## Future Vision
 
-AgenticID aims to become the standard for decentralized identity verification and aggregation across the Bitcoin and Ethereum ecosystems by creating a unified, privacy-preserving identity layer.
+Universal ID aims to become the standard for decentralized identity verification and aggregation across the Filecoin and broader Web3 ecosystems by creating a unified, privacy-preserving identity layer.
 
 ## 🧪 Getting Started
 
@@ -299,15 +294,15 @@ AgenticID aims to become the standard for decentralized identity verification an
 - Node.js 18+ (recommended)
 - yarn 4.1
 - MetaMask or another Web3 wallet
-- Rootstock network configuration
+- Filecoin network configuration
 
 ### Repository Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/0xshikhar/AgenticIdentity.git
-   cd AgenticIdentity/main
+   git clone https://github.com/0xshikhar/universal-id.git
+   cd universal-id
    ```
 
 2. Install root-level dependencies:
@@ -338,7 +333,7 @@ AgenticID aims to become the standard for decentralized identity verification an
 3. Create a `.env` file with necessary environment variables:
 
    ```
-   NEXT_PUBLIC_ROOTSTOCK_RPC_URL=https://public-node.testnet.rsk.co
+   NEXT_PUBLIC_FILECOIN_RPC_URL=https://api.calibration.node.glif.io/rpc/v1
    NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_wallet_connect_project_id
    ```
 
